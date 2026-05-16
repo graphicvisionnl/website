@@ -116,7 +116,7 @@ export default function Hero() {
               margin: 0,
             }}
           >
-            Van strategie tot lancering — wij bouwen de digitale aanwezigheid die jouw merk verdient.
+            Van strategie tot lancering. Wij bouwen de digitale aanwezigheid die jouw merk verdient.
           </motion.p>
 
           <motion.div

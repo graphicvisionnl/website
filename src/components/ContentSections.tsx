@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { FadeIn, AnimatedWords } from './AnimatedText'
+import { FadeIn } from './AnimatedText'
 
 export function MeerDanEenWebsite() {
   return (
@@ -16,32 +16,31 @@ export function MeerDanEenWebsite() {
                   Onze visie
                 </span>
               </div>
+              <h2 style={{
+                fontFamily: 'Syne, sans-serif',
+                fontWeight: 800,
+                fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
+                lineHeight: 1.08,
+                letterSpacing: '-0.03em',
+                color: '#ffffff',
+                margin: '0 0 1.25rem',
+              }}>
+                Meer dan een website
+              </h2>
             </FadeIn>
 
-            <h2 style={{
-              fontFamily: 'Syne, sans-serif',
-              fontWeight: 800,
-              fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
-              lineHeight: 1.08,
-              letterSpacing: '-0.03em',
-              color: '#ffffff',
-              margin: '0 0 1.25rem',
-            }}>
-              <AnimatedWords text="Meer dan een website" delay={0.1} />
-            </h2>
-
-            <FadeIn delay={0.4}>
+            <FadeIn delay={0.2}>
               <p style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, fontFamily: 'Inter', margin: '0 0 1rem' }}>
-                Jouw website is het eerste wat een potentiële klant ziet — en die eerste indruk telt. Wij bouwen websites die niet alleen mooi zijn, maar ook écht iets doen. Met doordachte animaties, interactieve elementen en een design dat aansluit bij jouw merk, zorg je dat bezoekers blijven hangen en terugkomen.
+                Jouw website is het eerste wat een potentiële klant ziet en die eerste indruk telt. Wij bouwen websites die niet alleen mooi zijn, maar ook écht iets doen. Met doordachte animaties, interactieve elementen en een design dat aansluit bij jouw merk, zorg je dat bezoekers blijven hangen en terugkomen.
               </p>
               <p style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, fontFamily: 'Inter', margin: 0 }}>
-                Of je nu net begint of al jaren actief bent — wij tillen jouw online aanwezigheid naar een niveau dat past bij waar jij naartoe wilt.
+                Of je nu net begint of al jaren actief bent, wij tillen jouw online aanwezigheid naar een niveau dat past bij waar jij naartoe wilt.
               </p>
             </FadeIn>
           </div>
 
           {/* Right — image */}
-          <FadeIn delay={0.2} direction="left">
+          <FadeIn delay={0.15} direction="left">
             <div style={{ borderRadius: '12px', overflow: 'hidden', aspectRatio: '4/3', position: 'relative' }}>
               <img
                 src="/resultaten.webp"
@@ -57,7 +56,7 @@ export function MeerDanEenWebsite() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
                 style={{
                   position: 'absolute',
                   bottom: '1.25rem',
@@ -111,23 +110,22 @@ export function JouwIdeeOnsWerk() {
                   Ons proces
                 </span>
               </div>
+              <h2 style={{
+                fontFamily: 'Syne, sans-serif',
+                fontWeight: 800,
+                fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
+                lineHeight: 1.08,
+                letterSpacing: '-0.03em',
+                color: '#0a0a0a',
+                margin: '0 0 1.25rem',
+              }}>
+                Jouw idee, ons werk
+              </h2>
             </FadeIn>
 
-            <h2 style={{
-              fontFamily: 'Syne, sans-serif',
-              fontWeight: 800,
-              fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
-              lineHeight: 1.08,
-              letterSpacing: '-0.03em',
-              color: '#0a0a0a',
-              margin: '0 0 1.25rem',
-            }}>
-              <AnimatedWords text="Jouw idee, ons werk" delay={0.1} />
-            </h2>
-
-            <FadeIn delay={0.4}>
+            <FadeIn delay={0.2}>
               <p style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, fontFamily: 'Inter', margin: '0 0 1rem' }}>
-                Van eerste gesprek tot live website — wij nemen je mee in elke stap. We beginnen altijd met een kennismakingsgesprek om jouw wensen, doelen en doelgroep goed te begrijpen.
+                Van eerste gesprek tot live website, wij nemen je mee in elke stap. We beginnen altijd met een kennismakingsgesprek om jouw wensen, doelen en doelgroep goed te begrijpen.
               </p>
               <p style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, fontFamily: 'Inter', margin: '0 0 1.75rem' }}>
                 Daarna werken we een ontwerp uit, bouwen we de website en testen we alles grondig voordat hij live gaat. Geen verrassingen, geen gedoe. Gewoon een helder en transparant proces waarbij jij altijd weet waar je aan toe bent en waarbij het eindresultaat echt van jou voelt.
@@ -181,39 +179,37 @@ export function WebsitesDieKlantenOpleveren() {
                   Conversie & groei
                 </span>
               </div>
+              <h2 style={{
+                fontFamily: 'Syne, sans-serif',
+                fontWeight: 800,
+                fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
+                lineHeight: 1.08,
+                letterSpacing: '-0.03em',
+                color: '#0a0a0a',
+                margin: '0 0 1.25rem',
+              }}>
+                Websites die klanten opleveren
+              </h2>
             </FadeIn>
 
-            <h2 style={{
-              fontFamily: 'Syne, sans-serif',
-              fontWeight: 800,
-              fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
-              lineHeight: 1.08,
-              letterSpacing: '-0.03em',
-              color: '#0a0a0a',
-              margin: '0 0 1.25rem',
-            }}>
-              <AnimatedWords text="Websites die klanten opleveren" delay={0.1} />
-            </h2>
-
-            <FadeIn delay={0.4}>
+            <FadeIn delay={0.2}>
               <p style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, fontFamily: 'Inter', margin: '0 0 1rem' }}>
-                Een mooie website is een goed begin — maar een website die bezoekers omzet in echte klanten is het echte doel. Wij bouwen altijd met conversie in gedachten. Dat betekent duidelijke call-to-actions, een logische structuur en een ontwerp dat vertrouwen uitstraalt vanaf de eerste seconde.
+                Een mooie website is een goed begin, maar een website die bezoekers omzet in echte klanten is het echte doel. Wij bouwen altijd met conversie in gedachten. Dat betekent duidelijke call-to-actions, een logische structuur en een ontwerp dat vertrouwen uitstraalt vanaf de eerste seconde.
               </p>
               <p style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, fontFamily: 'Inter', margin: 0 }}>
-                Of je nu meer offerteaanvragen wilt, meer producten wil verkopen of gewoon beter gevonden wil worden — wij zorgen dat jouw website voor je werkt, ook als jij slaapt.
+                Of je nu meer offerteaanvragen wilt, meer producten wil verkopen of gewoon beter gevonden wil worden. Wij zorgen dat jouw website voor je werkt, ook als jij slaapt.
               </p>
             </FadeIn>
           </div>
 
           {/* Right — image with overlay */}
-          <FadeIn delay={0.2} direction="left">
+          <FadeIn delay={0.15} direction="left">
             <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', aspectRatio: '4/3' }}>
               <img
                 src="/resultaten.webp"
                 alt="Websites die klanten opleveren"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />
-              {/* Stats overlay */}
               <div style={{
                 position: 'absolute',
                 inset: 0,

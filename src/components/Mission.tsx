@@ -32,10 +32,10 @@ export default function Mission() {
 
             <FadeIn delay={0.5}>
               <p style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, fontFamily: 'Inter', margin: '0 0 1rem' }}>
-                Veel bureaus verkopen losse diensten: een webdesign hier, een webshop daar. Wij denken anders. Jouw website is het hart van je merk — het eerste wat mensen zien, het laatste wat ze onthouden.
+                Veel bureaus verkopen losse diensten: een webdesign hier, een webshop daar. Wij denken anders. Jouw website is het hart van je merk. Het eerste wat mensen zien, het laatste wat ze onthouden.
               </p>
               <p style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, fontFamily: 'Inter', margin: 0 }}>
-                Daarom bouwen wij niet alleen een website. We bouwen een fundament voor jouw online groei — op maat, met strategie, en met oog voor detail.
+                Daarom bouwen wij niet alleen een website. We bouwen een fundament voor jouw online groei. Op maat, met strategie en met oog voor detail.
               </p>
             </FadeIn>
           </div>

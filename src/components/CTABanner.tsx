@@ -72,7 +72,7 @@ export default function CTABanner() {
             margin: '0 0 2.5rem',
           }}
         >
-          Plan een gratis kennismakingsgesprek en ontdek wat wij voor jouw merk kunnen doen. Geen verplichtingen, geen gedoe — gewoon een eerlijk gesprek.
+          Plan een gratis kennismakingsgesprek en ontdek wat wij voor jouw merk kunnen doen. Geen verplichtingen, geen gedoe. Gewoon een eerlijk gesprek.
         </motion.p>
 
         <motion.div

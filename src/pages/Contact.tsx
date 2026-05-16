@@ -132,7 +132,7 @@ export default function Contact() {
 
             <FadeIn delay={0.4}>
               <p style={{ color: '#666', fontSize: '1rem', fontFamily: 'Inter', lineHeight: 1.75, margin: '0 0 2.5rem' }}>
-                Vul het formulier in — wij nemen binnen 24 uur contact op voor een gratis en vrijblijvend gesprek.
+                Vul het formulier in. Wij nemen binnen 24 uur contact op voor een gratis en vrijblijvend gesprek.
               </p>
             </FadeIn>
 
@@ -457,7 +457,7 @@ export default function Contact() {
                             }}
                             value={form.message}
                             onChange={(e) => update('message', e.target.value)}
-                            placeholder="Vertel ons over jouw idee, doelen, budget of deadline — alles is welkom."
+                            placeholder="Vertel ons over jouw idee, doelen, budget of deadline. Alles is welkom."
                             onFocus={(e) => { (e.target as HTMLElement).style.borderColor = '#ff794f' }}
                             onBlur={(e) => { (e.target as HTMLElement).style.borderColor = '#222' }}
                           />

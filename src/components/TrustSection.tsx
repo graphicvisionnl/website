@@ -88,7 +88,7 @@ export default function TrustSection() {
                 ))}
               </div>
               <span style={{ color: '#888', fontSize: '13px', fontFamily: 'Inter' }}>
-                <span style={{ color: '#fff', fontWeight: 600 }}>3.8</span> · 2 reviews op Trustpilot ↗
+                Bekijk onze reviews op <span style={{ color: '#fff', fontWeight: 600 }}>Trustpilot</span> ↗
               </span>
             </a>
           </FadeIn>
