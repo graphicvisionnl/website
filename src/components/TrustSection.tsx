@@ -15,22 +15,20 @@ function Stars({ count = 5 }: { count?: number }) {
 
 const reviews = [
   {
-    name: 'Thomas B.',
-    company: 'SequenceFlow',
+    name: 'Noctis',
+    company: 'Noctis — E-commerce',
     rating: 5,
-    text: 'Graphic Vision heeft ons complexe AI-product perfect vertaald naar een helder en professioneel website. Snelle communicatie, scherp design, echt meedenken.',
+    title: 'Website voor mijn bedrijf Noctis',
+    text: 'Ik heb een website laten maken bij hun voor mijn ecom bedrijf. Het proces verliep snel en soepel en het fijne was dat ze veel met mij mee dachten. Ik ben echt tevreden met mijn website en zou het zeker andere aanraden!',
+    date: 'Juni 2025',
   },
   {
-    name: 'Laura M.',
-    company: 'Sustana',
+    name: 'Timo Brak',
+    company: 'Ondernemer',
     rating: 5,
-    text: 'Precies wat we zochten. Een strakke website die uitstraalt waar wij voor staan. De samenwerking was fijn en alles werd op tijd opgeleverd.',
-  },
-  {
-    name: 'Mark V.',
-    company: 'Noctis Essentials',
-    rating: 5,
-    text: 'Onze webshop is volledig nieuw leven ingeblazen. Professioneel, snel en echt oog voor detail. Al meer dan 5.000 bestellingen na de relaunch.',
+    title: 'Graphic Vision heeft zeer professionele websites voor ons gemaakt',
+    text: 'Graphic Vision heeft twee zeer professionele websites voor ons ontwikkeld en we zijn enorm tevreden. Vanaf het eerste contact werd er goed meegedacht over niet alleen het design en de technische uitvoering, maar ook over de content, structuur en creatieve invulling. Wat voor ons het verschil maakte: ze kijken verder dan alleen "een website bouwen" — ze denken actief mee over uitstraling, conversie en hoe je merk online naar voren komt.',
+    date: 'Mei 2026',
   },
 ]
 
@@ -90,14 +88,14 @@ export default function TrustSection() {
                 ))}
               </div>
               <span style={{ color: '#888', fontSize: '13px', fontFamily: 'Inter' }}>
-                <span style={{ color: '#fff', fontWeight: 600 }}>Uitstekend</span> op Trustpilot ↗
+                <span style={{ color: '#fff', fontWeight: 600 }}>3.8</span> · 2 reviews op Trustpilot ↗
               </span>
             </a>
           </FadeIn>
         </div>
 
         {/* Reviews */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem' }} className="reviews-grid">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem' }} className="reviews-grid">
           {reviews.map((review, i) => (
             <motion.div
               key={i}
@@ -109,26 +107,42 @@ export default function TrustSection() {
                 background: '#0e0e0e',
                 border: '1px solid #1a1a1a',
                 borderRadius: '10px',
-                padding: '1.25rem',
+                padding: '1.5rem',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem',
               }}
             >
-              <Stars count={review.rating} />
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                <Stars count={review.rating} />
+                <span style={{ color: '#333', fontFamily: 'Inter', fontSize: '12px' }}>{review.date}</span>
+              </div>
               <p style={{
-                color: '#bbb',
+                color: '#fff',
+                fontFamily: 'Syne',
+                fontWeight: 700,
+                fontSize: '0.95rem',
+                margin: 0,
+                lineHeight: 1.3,
+              }}>
+                {review.title}
+              </p>
+              <p style={{
+                color: '#888',
                 fontFamily: 'Inter',
-                fontSize: '0.9rem',
-                lineHeight: 1.65,
-                margin: '0.75rem 0 1rem',
-                fontStyle: 'italic',
+                fontSize: '0.875rem',
+                lineHeight: 1.7,
+                margin: 0,
               }}>
                 "{review.text}"
               </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: 'auto', paddingTop: '0.5rem', borderTop: '1px solid #1a1a1a' }}>
                 <div style={{
                   width: '32px', height: '32px', borderRadius: '50%',
                   background: '#ff794f22', border: '1px solid #ff794f44',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   color: '#ff794f', fontFamily: 'Syne', fontWeight: 700, fontSize: '13px',
+                  flexShrink: 0,
                 }}>
                   {review.name[0]}
                 </div>

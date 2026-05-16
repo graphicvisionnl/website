@@ -5,12 +5,12 @@ import { FadeIn, AnimatedWords } from './AnimatedText'
 export function MeerDanEenWebsite() {
   return (
     <section style={{ background: '#080808', borderTop: '1px solid #111' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: 'clamp(2.5rem, 4vw, 3.5rem) 2rem' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: 'clamp(4rem, 7vw, 6rem) 2rem' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="content-grid">
           {/* Left */}
           <div>
             <FadeIn>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.5rem' }}>
                 <span style={{ display: 'inline-block', width: '24px', height: '2px', background: '#ff794f' }} />
                 <span style={{ color: '#ff794f', fontSize: '12px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'Inter' }}>
                   Onze visie
@@ -89,7 +89,7 @@ export function MeerDanEenWebsite() {
 export function JouwIdeeOnsWerk() {
   return (
     <section style={{ background: '#f8f8f6', borderTop: '1px solid #e8e8e6' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: 'clamp(2.5rem, 4vw, 3.5rem) 2rem' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: 'clamp(4rem, 7vw, 6rem) 2rem' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="content-grid-rev">
           {/* Left — image */}
           <FadeIn delay={0.1}>
@@ -105,7 +105,7 @@ export function JouwIdeeOnsWerk() {
           {/* Right — text */}
           <div>
             <FadeIn>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.5rem' }}>
                 <span style={{ display: 'inline-block', width: '24px', height: '2px', background: '#ff794f' }} />
                 <span style={{ color: '#ff794f', fontSize: '12px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'Inter' }}>
                   Ons proces
@@ -170,12 +170,12 @@ export function JouwIdeeOnsWerk() {
 export function WebsitesDieKlantenOpleveren() {
   return (
     <section style={{ background: '#ffffff', borderTop: '1px solid #e8e8e6', borderBottom: '1px solid #e8e8e6' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: 'clamp(2.5rem, 4vw, 3.5rem) 2rem' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: 'clamp(4rem, 7vw, 6rem) 2rem' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="content-grid-3">
           {/* Left — text */}
           <div>
             <FadeIn>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.5rem' }}>
                 <span style={{ display: 'inline-block', width: '24px', height: '2px', background: '#ff794f' }} />
                 <span style={{ color: '#ff794f', fontSize: '12px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'Inter' }}>
                   Conversie & groei
