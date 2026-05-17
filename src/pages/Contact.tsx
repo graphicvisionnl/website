@@ -1,7 +1,12 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 import { AnimatedWords, FadeIn } from '../components/AnimatedText'
 import Footer from '../components/Footer'
+
+const EJS_SERVICE = 'service_fea84g2'
+const EJS_TEMPLATE = 'template_oafirq9'
+const EJS_PUBLIC_KEY = 'NJJIAsc8GHNEDg1-5'
 
 type Step = 1 | 2 | 3 | 4
 
@@ -33,6 +38,8 @@ export default function Contact() {
   const [step, setStep] = useState<Step>(1)
   const [direction, setDirection] = useState(1)
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [sendError, setSendError] = useState(false)
   const [form, setForm] = useState<FormData>({
     service: '',
     firstName: '',
@@ -57,9 +64,25 @@ export default function Contact() {
     setStep((s) => Math.max(s - 1, 1) as Step)
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSending(true)
+    setSendError(false)
+    try {
+      await emailjs.send(EJS_SERVICE, EJS_TEMPLATE, {
+        from_name: `${form.firstName} ${form.lastName}`.trim(),
+        from_email: form.email,
+        company: form.company || 'Niet opgegeven',
+        phone: form.phone || 'Niet opgegeven',
+        service: form.service,
+        message: form.message,
+      }, EJS_PUBLIC_KEY)
+      setSubmitted(true)
+    } catch {
+      setSendError(true)
+    } finally {
+      setSending(false)
+    }
   }
 
   const inputStyle: React.CSSProperties = {
@@ -495,8 +518,9 @@ export default function Contact() {
                             </button>
                             <button
                               type="submit"
+                              disabled={sending}
                               style={{
-                                background: '#ff794f',
+                                background: sending ? '#555' : '#ff794f',
                                 color: '#080808',
                                 border: 'none',
                                 borderRadius: '8px',
@@ -504,15 +528,20 @@ export default function Contact() {
                                 fontFamily: 'Syne',
                                 fontWeight: 700,
                                 fontSize: '15px',
-                                cursor: 'pointer',
+                                cursor: sending ? 'not-allowed' : 'pointer',
                                 transition: 'background 0.2s',
                               }}
-                              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = '#e06035' }}
-                              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = '#ff794f' }}
+                              onMouseEnter={(e) => { if (!sending) (e.currentTarget as HTMLElement).style.background = '#e06035' }}
+                              onMouseLeave={(e) => { if (!sending) (e.currentTarget as HTMLElement).style.background = '#ff794f' }}
                             >
-                              Verstuur bericht →
+                              {sending ? 'Versturen...' : 'Verstuur bericht →'}
                             </button>
                           </div>
+                          {sendError && (
+                            <p style={{ color: '#ff6b6b', fontFamily: 'Inter', fontSize: '13px', margin: '1rem 0 0', textAlign: 'center' }}>
+                              Er ging iets mis. Probeer het opnieuw of mail ons op hello@graphicvision.nl
+                            </p>
+                          )}
                         </form>
                       </motion.div>
                     )}
