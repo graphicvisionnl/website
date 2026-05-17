@@ -5,7 +5,6 @@ import { motion, AnimatePresence, useMotionValue, useSpring } from 'framer-motio
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Portfolio', path: '/portfolio' },
-  { label: 'Contact', path: '/contact' },
 ]
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

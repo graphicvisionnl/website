@@ -86,7 +86,7 @@ export default function Footer() {
               {[
                 { label: 'Home', path: '/' },
                 { label: 'Portfolio', path: '/portfolio' },
-                { label: 'Contact', path: '/contact' },
+                { label: 'Offerte aanvragen', path: '/contact' },
               ].map((link) => (
                 <Link
                   key={link.path}

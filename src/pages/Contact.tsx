@@ -108,7 +108,7 @@ export default function Contact() {
 
         <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '5rem', alignItems: 'start', position: 'relative' }} className="contact-grid">
           {/* Left info */}
-          <div style={{ position: 'sticky', top: '120px' }}>
+          <div style={{ position: 'sticky', top: '120px' }} className="contact-sticky">
             <FadeIn>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.5rem' }}>
                 <span style={{ display: 'inline-block', width: '24px', height: '2px', background: '#ff794f' }} />
@@ -529,6 +529,7 @@ export default function Contact() {
       <style>{`
         @media (max-width: 900px) {
           .contact-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+          .contact-sticky { position: static !important; }
         }
       `}</style>
     </main>
